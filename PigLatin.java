@@ -37,4 +37,5 @@ public static void main(String[]args){
     s = s.substring(1,s.length()) + s.substring(0,1) + "ay";
     return s.toLowerCase();
   }
+  public static String pigLatinBest(String s){}
 }
