@@ -14,8 +14,7 @@ public class PigLatin{
     return s.toLowerCase();
   }
   public static void main(String[]args){
-  System.out.println(pigLatinBest("Science!"));
-  // System.out.println(pigLatinBest("4chan"));
+  //System.out.println(pigLatinBest("a"));
   // System.out.println(pigLatinBest("fish!"));
   // System.out.println(pigLatinBest("fish") );
   // System.out.println(pigLatinBest("the."));
@@ -47,7 +46,11 @@ public class PigLatin{
     }
     String[] vowels = new String[]{"a","e","i","o","u"};
     for (int i = 0; i < vowels.length;i++){
-        if (s.length() >= 1 && s.substring(0,1).equals(vowels[i])){
+        if (s.equals(vowels[i])){
+          s += "hay";
+          return s.toLowerCase();
+        }
+        else if (s.substring(0,1).toLowerCase().equals(vowels[i])){
           s += "hay";
           return s.toLowerCase();
         }
@@ -63,6 +66,9 @@ public class PigLatin{
         String b = "";
         for (int j = 0;j < NumberAlphabet.length;j++){
           if (!s.substring(s.length()-1,s.length()).toLowerCase().equals(NumberAlphabet[j])){
+            if (s.length() == 1){
+              return pigLatin(s);
+            }
             b = pigLatin(s.substring(0,s.length()-1));
             b += s.substring(s.length()-1,s.length());
           }
