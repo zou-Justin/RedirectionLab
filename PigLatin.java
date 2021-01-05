@@ -76,7 +76,6 @@ public class PigLatin{
       }
 
     }
-    
     return s.toLowerCase();
   }
 }
