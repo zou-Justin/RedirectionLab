@@ -14,7 +14,7 @@ public class PigLatin{
     return s.toLowerCase();
   }
   public static void main(String[]args){
-  System.out.println(pigLatinBest("science"));
+  //System.out.println(pigLatinBest("science"));
   // System.out.println(pigLatinBest("4chan"));
   // System.out.println(pigLatinBest("fish!"));
   // System.out.println(pigLatinBest("fish") );
@@ -30,9 +30,7 @@ public class PigLatin{
            if (line.hasNext()){
              System.out.print(" ");
          }
-         if (n.hasNextLine()){
-           System.out.println();
-         }
+      
          }
          
        }
@@ -42,14 +40,14 @@ public class PigLatin{
   public static String pigLatin(String s){
     String[] diagraphs = new String[]{"bl", "br", "ch", "ck", "cl", "cr", "dr", "fl", "fr", "gh", "gl", "gr", "ng", "ph", "pl", "pr", "qu", "sc", "sh", "sk", "sl", "sm", "sn", "sp", "st", "sw", "th", "tr", "tw", "wh", "wr"};
     for (int i = 0; i < diagraphs.length;i++){
-        if (s.substring(0,2).equals(diagraphs[i]) && s.length() >= 2){
+        if (s.length() >= 2 && s.substring(0,2).equals(diagraphs[i]) ){
           s = s.substring(2,s.length()) + s.substring(0,2) + "ay";
           return s.toLowerCase();
         }
     }
     String[] vowels = new String[]{"a","e","i","o","u"};
     for (int i = 0; i < vowels.length;i++){
-        if (s.substring(0,1).equals(vowels[i])){
+        if (s.length() >= 1 && s.substring(0,1).equals(vowels[i])){
           s += "hay";
           return s.toLowerCase();
         }
@@ -76,6 +74,7 @@ public class PigLatin{
       }
 
     }
+    
     return s.toLowerCase();
   }
 }
