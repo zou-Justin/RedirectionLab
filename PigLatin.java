@@ -21,18 +21,18 @@ public class PigLatin{
   // System.out.println(pigLatinBest("cat!"));
   // System.out.println(pigLatinBest("amazing?"));
   // System.out.println(pigLatinBest("apple%"));
-   // Scanner n = new Scanner(System.in);
-   //   while(n.hasNextLine()){
-   //       Scanner line = new Scanner(n.nextLine());
-   //       while (line.hasNext()){
-   //         System.out.print(pigLatinBest(line.next()));
-   //         if (line.hasNext()){
-   //           System.out.print(" ");
-   //       }
-   // 
-   //       }
-   // 
-   //     }
+   Scanner n = new Scanner(System.in);
+     while(n.hasNextLine()){
+         Scanner line = new Scanner(n.nextLine());
+         while (line.hasNext()){
+           System.out.print(pigLatinBest(line.next()));
+           if (line.hasNext()){
+             System.out.print(" ");
+         }
+   
+         }
+   
+       }
      }    
 
 
