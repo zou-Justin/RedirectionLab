@@ -37,5 +37,9 @@ public static void main(String[]args){
     s = s.substring(1,s.length()) + s.substring(0,1) + "ay";
     return s.toLowerCase();
   }
-  public static String pigLatinBest(String s){}
+  public static String pigLatinBest(String s){
+    String[] Alphabet = new String[]{"a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"};
+    String[] AlphabetNumbers = new String[]{"a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z","1","2","3","4","5","6","7","8","9","0"};
+    
+  }
 }
