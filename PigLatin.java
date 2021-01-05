@@ -13,10 +13,10 @@ public class PigLatin{
     return s.toLowerCase();
 }
 public static void main(String[]args){
-  System.out.println(pigLatinSimple("mock"));
-  System.out.println(pigLatinSimple("pie"));
-  System.out.println(pigLatinSimple("david"));
-  System.out.println(pigLatinSimple("aaron"));
+  System.out.println(pigLatin("the"));
+  System.out.println(pigLatin("skee"));
+  System.out.println(pigLatin("emu"));
+  System.out.println(pigLatin("grade"));
 }
   public static String pigLatin(String s){
     String[] vowels = new String[]{"a","e","i","o","u"};
