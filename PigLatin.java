@@ -14,7 +14,7 @@ public class PigLatin{
     return s.toLowerCase();
   }
   public static void main(String[]args){
-  //System.out.println(pigLatinBest("science"));
+  System.out.println(pigLatinBest("Science!"));
   // System.out.println(pigLatinBest("4chan"));
   // System.out.println(pigLatinBest("fish!"));
   // System.out.println(pigLatinBest("fish") );
@@ -22,25 +22,25 @@ public class PigLatin{
   // System.out.println(pigLatinBest("cat!"));
   // System.out.println(pigLatinBest("amazing?"));
   // System.out.println(pigLatinBest("apple%"));
-   Scanner n = new Scanner(System.in);
-     while(n.hasNextLine()){
-         Scanner line = new Scanner(n.nextLine());
-         while (line.hasNext()){
-           System.out.print(pigLatinBest(line.next()));
-           if (line.hasNext()){
-             System.out.print(" ");
-         }
-      
-         }
-         
-       }
+   // Scanner n = new Scanner(System.in);
+   //   while(n.hasNextLine()){
+   //       Scanner line = new Scanner(n.nextLine());
+   //       while (line.hasNext()){
+   //         System.out.print(pigLatinBest(line.next()));
+   //         if (line.hasNext()){
+   //           System.out.print(" ");
+   //       }
+   // 
+   //       }
+   // 
+   //     }
      }    
 
 
   public static String pigLatin(String s){
     String[] diagraphs = new String[]{"bl", "br", "ch", "ck", "cl", "cr", "dr", "fl", "fr", "gh", "gl", "gr", "ng", "ph", "pl", "pr", "qu", "sc", "sh", "sk", "sl", "sm", "sn", "sp", "st", "sw", "th", "tr", "tw", "wh", "wr"};
     for (int i = 0; i < diagraphs.length;i++){
-        if (s.length() >= 2 && s.substring(0,2).equals(diagraphs[i]) ){
+        if (s.length() >= 2 && s.substring(0,2).toLowerCase().equals(diagraphs[i]) ){
           s = s.substring(2,s.length()) + s.substring(0,2) + "ay";
           return s.toLowerCase();
         }
