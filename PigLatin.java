@@ -29,7 +29,8 @@ public class PigLatin{
            if (line.hasNext()){
              System.out.print(" ");
          }
-   
+         else{
+          System.out.println();}
          }
    
        }
